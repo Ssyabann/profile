@@ -21,13 +21,11 @@
         <a href="#" class="logo">Syaban</a>
 
         <nav class="navbar">
-        <ul>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
             <a href="#gallery">Contact</a>
             <a href="#regist">Regist</a>
-        </ul>
         </nav>
     </header>
     </div>
@@ -38,7 +36,6 @@
                 <a href="" class="btn"><i class="ri-bard-fill"></i> Hello, i'm Syaban</a>
             </div>
                 <h1>Hello <br><span class="text">World</span></h1>
-                <h3 class="text-animation"><span></span></h3>
                 <p>Halo, saya <b>Syaban</b> seorang pelajar yang bersemangat dan ingin menjadi web developer.  Saya senang mengubah ide menjadi website yang menarik dan responsif.                    
                 </p><br>
 
@@ -58,8 +55,18 @@
         </div>
     </section>
 
-    <section class="about" id="about">
-        <iframe src="about.html" frameborder="0"></iframe>
-    </section>
+    <section class="about" id="about"></section>
+    <section class="gallery" id="gallery"></section>
+    
+<!-- javascript -->
+<script>
+  fetch("about.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("about").innerHTML = data);
+
+    fetch("gallery.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("gallery").innerHTML = data);
+</script>
 </body>
 </html>
